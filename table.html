@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Submitted Data</h2>
+
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td id="firstName"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td id="lastName"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td id="email"></td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td id="dob"></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td id="age"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td id="gender"></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td id="phone"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td id="address"></td>
+        </tr>
+    </table>
+
+    <script>
+        // Extract URL parameters and display them in the table
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("firstName").textContent = params.get("firstName");
+        document.getElementById("lastName").textContent = params.get("lastName");
+        document.getElementById("email").textContent = params.get("email");
+        document.getElementById("dob").textContent = params.get("dob");
+        document.getElementById("age").textContent = params.get("age");
+        document.getElementById("gender").textContent = params.get("gender");
+        document.getElementById("phone").textContent = params.get("phone");
+        document.getElementById("address").textContent = params.get("address");
+    </script>
+</body>
+</html>
